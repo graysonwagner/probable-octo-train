@@ -10,10 +10,8 @@ var hour4 = moment("4:00:00 am", "h:mm:ss a")
 var hour5 = moment("5:00:00 pm", "h:mm:ss a")
 var hour6 = moment("6:00:00 pm", "h:mm:ss a")
 
-// Variable for current time
 var time = moment()
 
-// Pushes current date and time onto the HTML
 $("#currentDay").text(time.format("LLL"))
 
 // Variables for thetext box
@@ -54,7 +52,7 @@ function savePlanner() {
     localStorage.setItem("5PM", text5Div.val());
 }
 
-// Variables for buttons
+// Button variables
 var button0 = document.getElementById("button0")
 var button1 = document.getElementById("button1")
 var button2 = document.getElementById("button2")
@@ -65,7 +63,7 @@ var button6 = document.getElementById("button6")
 var button7 = document.getElementById("button7")
 var button8 = document.getElementById("button8")
 
-// Button on click functions 
+// Click function buttons
 button0.addEventListener("click", savePlanner);
 button1.addEventListener("click", savePlanner);
 button2.addEventListener("click", savePlanner);
@@ -88,31 +86,29 @@ $(".div4").attr("class", "future col-md-10 div4")
 $(".div5").attr("class", "future col-md-10 div5")
 
 
-// The if statements:
-
-// If time is between 9AM and 10AM START
+// 9AM and 10AM START
 if (time.isBetween(hour9, hour10)) {
     $(".div9").attr("class", "present col-md-10 div9")
 }
-// If time is between 10AM and 11AM
+// 10AM and 11AM
 if (time.isBetween(hour10, hour11)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "present col-md-10 div10")
 }
-// If time is between 11AM and 12PM
+// 11AM and 12PM
 if (time.isBetween(hour11, hour12)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
     $(".div11").attr("class", "present col-md-10 div11")
 }
-// If time is between 12PM and 1PM
+// 12PM and 1PM
 if (time.isBetween(hour12, hour1)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
     $(".div11").attr("class", "past col-md-10 div11")
     $(".div12").attr("class", "present col-md-10 div12")
 }
-// If time is between 1PM and 2PM
+// 1PM and 2PM
 if (time.isBetween(hour1, hour2)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
@@ -120,7 +116,7 @@ if (time.isBetween(hour1, hour2)) {
     $(".div12").attr("class", "past col-md-10 div12")
     $(".div1").attr("class", "present col-md-10 div1")
 }
-// If time is between 2PM and 3PM
+// 2PM and 3PM
 if (time.isBetween(hour2, hour3)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
@@ -129,7 +125,7 @@ if (time.isBetween(hour2, hour3)) {
     $(".div1").attr("class", "past col-md-10 div1")
     $(".div2").attr("class", "present col-md-10 div2")
 }
-// If time is between 3PM and 4PM
+// 3PM and 4PM
 if (time.isBetween(hour3, hour4)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
@@ -139,7 +135,7 @@ if (time.isBetween(hour3, hour4)) {
     $(".div2").attr("class", "past col-md-10 div2")
     $(".div3").attr("class", "present col-md-10 div3")
 }
-// If time is between 4PM and 5PM
+// 4PM and 5PM
 if (time.isBetween(hour4, hour5)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
@@ -150,7 +146,7 @@ if (time.isBetween(hour4, hour5)) {
     $(".div3").attr("class", "past col-md-10 div3")
     $(".div4").attr("class", "present col-md-10 div4")
 }
-// If time is between 5PM and 6PM
+// 5PM and 6PM
 if (time.isBetween(hour5, hour6)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
@@ -162,7 +158,7 @@ if (time.isBetween(hour5, hour6)) {
     $(".div4").attr("class", "past col-md-10 div4")
     $(".div5").attr("class", "present col-md-10 div5")
 }
-// If time is after 6PM END
+// 6PM END
 if (time.isAfter(hour6)) {
     $(".div9").attr("class", "past col-md-10 div9")
     $(".div10").attr("class", "past col-md-10 div10")
